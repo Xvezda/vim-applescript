@@ -17,3 +17,8 @@ Default: `'[AppleScriptRun Output]'`
 `g:applescript_config.run.output.open_command`  
 A command to open output buffer used in `:AppleScriptRun` command.  
 Default: `'botright split'`  
+  
+`g:applescript_config.indent.continuation_multiplier`  
+Indentation multiplier of line which next to continuation character `¬` appears.  
+Default: `2`
+
