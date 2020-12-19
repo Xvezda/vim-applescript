@@ -163,4 +163,4 @@ endif
 let &cpo=s:cpo_save
 unlet s:cpo_save
 
-" vim: foldmethod=marker
+" vim: foldmethod=marker autoindent noexpandtab tabstop=4 shiftwidth=4 softtabstop=-1

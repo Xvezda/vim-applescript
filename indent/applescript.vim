@@ -32,6 +32,7 @@ func! s:returnAppleScriptIndent()
 	let l:prev_line=s:prev_non_connected_line(l:prev_line)
 
 	let l:indent=indent(l:prev_line)
+	if l:indent<0 | let l:indent=0 | endif
 
 	if l:prev_line_save-l:prev_line==1
 		"連結開始
@@ -79,4 +80,4 @@ endfunc
 let &cpo=s:cpo_save
 unlet s:cpo_save
 
-" vim: foldmethod=marker
+" vim: foldmethod=marker autoindent noexpandtab tabstop=4 shiftwidth=4 softtabstop=-1
