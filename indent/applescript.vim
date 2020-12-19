@@ -35,7 +35,12 @@ func! s:returnAppleScriptIndent()
 
 	if l:prev_line_save-l:prev_line==1
 		"連結開始
-		let l:indent+=shiftwidth()*2
+		if exists('g:applescript_config') && has_key(g:applescript_config,'indent')
+			let l:indent+=shiftwidth()
+				  \*g:applescript_config.indent.continuation_multiplier
+		else
+			let l:indent+=shiftwidth()*2
+		endif
 	elseif l:prev_line_save-l:prev_line>=2
 		"絶賛連結中
 		"その時は前の行のインデントをそのまま流用する

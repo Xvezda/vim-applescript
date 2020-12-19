@@ -35,7 +35,10 @@ let s:default_config.run = {
 			\'output': {
 			\	'buffer_name': '[AppleScriptRun Output]',
 			\	'open_command': 'botright split'
-			\	}
+			\	},
+			\'indent': {
+			\   'continuation_multiplier': 2
+			\   }
 			\}
 func! s:bufnr(expr) abort "{{{
 	if type(a:expr) == type('')
